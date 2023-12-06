@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SERVICES</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+        function displayMessage(service) {
+            alert("You selected the service: " + service);
+        }
+    </script>
+	<script src ="time.js"></script>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <h1>BIOMEDICARE PHARMACY</h1>
+			<div id="clock"></div>
+            <div id="calendar"></div>
+            <div id="greeting"></div>
+        </div>
+
+        <div id="nav">
+            <table>
+                <tr>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+                    <a href="home.html">Home</a>
+					<a href="about.html">About Us</a>
+                    <a href="service.html">Service</a>
+                    <a href="product.html">Product</a>
+                    <a href="contact.html">Contact Us</a>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Services">
+            <table border="0" cellpadding="2" cellspacing="2" align="center">
+                <tr>
+                    <th colspan="2" align="center"><h2>Services</h2></th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="pressure.jpg" onclick="displayMessage('Reading Blood Pressure')">
+                    </td>
+                    <td>
+                        <h3>Reading Blood Pressure<h3>
+                            <br>We offer customers service of reading<br>their blood pressure when needed for<br>their convenience
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="bekam.jpg" onclick="displayMessage('Cupping Therapy')">
+                    </td>
+                    <td>
+                        <h3>Cupping therapy<h3>
+                            <br>We have a specialized team who are<br>experts in doing cupping therapy
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="vaccs.jpg" onclick="displayMessage('Vaccinations')">
+                    </td>
+                    <td>
+                        <h3>Vaccinations<h3>
+                            <br>We are licensed and trained to give out<br>vaccinations to patients in need
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>

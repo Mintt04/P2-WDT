@@ -1,0 +1,236 @@
+body {
+    background-repeat: repeat;
+    background-attachment: fixed;
+    justify-content: fixed;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    color: #A7C7E7;
+    background-color: #000080;
+    padding: 1px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: lucida handwriting;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+#nav {
+    position: fixed;
+    top: 60px;
+    list-style-type: none;
+    height: 876px;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    color: #4682B4;
+    float: left;
+    border: 30px;
+    text-shadow: 2px 1px #ADD8E6;
+}
+
+#container {
+    padding-top: 100px; 
+	background-image : url("farmasi.jpg");
+	height : 1290px;
+    border-radius : 30px;
+	}
+}
+
+	.column {
+	flex: 2;
+	padding: 10px;
+	border-radius: 10px;
+	}
+	
+	select, textarea, input {
+	border-radius : 20px;
+	background-color : #EDEADE;
+	}
+
+	.form-container {
+	  background-color: #6F8FAF; 
+	  border: 2px solid #B6B6B4; 
+	  border-radius: 40px; 
+	  padding-left : auto; 
+	  width: 60%; 
+	  margin: auto;
+	  font-family : monospace;
+	  font-size : 16px;
+	}
+	
+	.right-logo {
+	float : right;
+	}
+	
+	.num {
+	text-align : center;
+	color : red;
+	}
+	
+	.box {
+	background-color: #6F8FAF; 
+	border: 2px solid #B6B6B4; 
+	border-radius: 70px; 
+	padding-left : auto; 
+	width: 60%;
+	margin: auto; 
+	text-align : center;
+	}
+
+	#nav {
+	list-style-type : none;
+	height : 876px;
+	margin : 0;
+	padding : 0;
+	width : 200px;
+    color : #4682B4;
+	float : left;
+	border : 30px;
+	text-shadow : 2px 1px #ADD8E6;
+	}
+
+	#content {
+	text-align : center;
+	float : center;
+	}
+
+	img {
+	width : 300px;
+	height : 300px;
+	}
+
+	a {
+	display : block;
+	font-size : 20px;
+	font-family : verdana;
+	border-radius : 30px;
+	color : black;
+	text-align : center;
+	padding : 10px 5px;
+	text-decoration : none;
+	}
+
+	a:hover {background-color : #A7C7E7;}
+
+     .detail {
+	font-family : georgia;
+	font-size : 19px;
+	}
+
+	#header {
+	color : #A7C7E7;
+	background-color : #000080;
+	padding : 1px;
+	text-align : center;
+	margin-left : auto;
+	margin-right : auto;
+	font-family : lucida handwriting;
+	border-top-right-radius : 30px;
+	border-top-left-radius: 30px;
+	}
+
+	form {
+	padding : 10px;
+	}
+
+	h3 {
+	color : #000000;
+	font-family : courier new;
+	}
+	
+	.Products{
+	margin-top: 50px;
+	margin-left: 220px;
+	margin-right: 20px;
+	background-color: #6F8FAF;
+	text-align: center;
+	font-family: "Lucida Console", "Courier New", "monospace";
+	border-radius: 40px;
+	}
+	
+	.Products img{
+		width: 220px;
+		height: 220px;
+	}
+
+	.Services{
+    margin-top: 50px;
+	margin-left: 220px;
+	background-color: #6F8FAF;
+	font-family: "Lucida Console", "Courier New", "monospace";
+	border-radius: 40px;
+	}
+	
+	.Services img{
+		width: 200px;
+		height:200px;
+	}
+	
+	#txt {
+		font-size : 60px;
+		color : #A7C7E7;
+		background-color : #000080;
+		
+	}
+#cart {
+    position: fixed;
+    top: 23%;
+    left: 88%;
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+    .addtocart {
+	border-radius : 10px;
+	background-color : #A7C7E7;
+	font-size : 14.5px;
+	font-family : georgia;
+	margin : auto;
+	}
+
+   .contact-info {
+    cursor: pointer;
+    color: black; 
+	font-size : 19px;
+    }
+	
+	.reset, .submit {
+	border-radius : 10px;
+	background-color : #A7C7E7;
+	font-size : 16px;
+	font-family : georgia;
+	margin : auto;
+	}
+	
+	.reset:hover, .submit:hover, .addtocart:hover {
+	background-color : grey;
+	}
+	
+	select:hover, textarea:hover, input:hover {
+	background-color : #ADD8E6;
+	}
+	
+	 #slideshow {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        #content {
+            text-align: center;
+        }
+
+        #content img {
+            max-width: 100%;
+            height: auto;
+        }

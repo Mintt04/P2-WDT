@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PRODUCTS</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="time.js"></script>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <h1>BIOMEDICARE PHARMACY</h1>
+            <div id="clock"></div>
+            <div id="calendar"></div>
+            <div id="greeting"></div>
+        </div>
+
+        <div id="txt" align="center"></div>
+
+        <div id="nav">
+            <table>
+                <tr>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+                    <a href="home.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="service.html">Service</a>
+                    <a href="product.html">Product</a>
+                    <a href="contact.html">Contact Us</a>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Products">
+            <table border="0" cellpadding="2" cellspacing="2" width="500" align="center">
+                <tr>
+                    <th colspan="4" align="center">
+                        <h2>Products</h2>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="medicine.jpg" width="90" height="90"> <br>Medicine <br> [RM 10.00]
+                        <br>
+                        <button class="addtocart" onclick="addToCart('Medicine')">Add to Cart</button>
+                    </td>
+                    <td>
+                        <img src="wchair.jpg" width="90" height="90"> <br>Movement Assistance <br> [RM 280.00]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Movement Assistance')">Add to Cart</button>
+                    </td>
+                    <td>
+                        <img src="bodywash.jpg" width="90" height="90"> <br>Body Wash <br> [RM 18.50]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Body Wash')">Add to Cart</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="aid.jpg" width="90" height="90"> <br>First Aid Equipments <br> [RM 150.50]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('First Aid Equipments')">Add to Cart</button>
+                    </td>
+                    <td>
+                        <img src="epipen.jpg" width="90" height="90"> <br>Epipens <br> [RM 108.00]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Epipens')">Add to Cart</button>
+                    </td>
+                    <td>
+                        <img src="mask.jpg" width="90" height="90"> <br>Face Mask <br> [RM 25.00]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Face Mask')">Add to Cart</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="inhaler.jpeg" width="90" height="90"> <br>Inhaler <br> [RM 55.00]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Inhaler')">Add to Cart</button>
+                    </td>
+                    <td>
+                        <img src="bed.jpg" width="90" height="90"> <br>Hospital Bed <br> [RM 230.00]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Hospital Bed')">Add to Cart</button>
+                    </td>
+                    <td>
+                        <img src="serum.jpg" width="90" height="90"> <br>Face Serum <br> [RM 60.50]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Face Serum')">Add to Cart</button>
+                    </td>
+                </tr>
+				<tr>
+				    <td>
+                        <img src="blood.jpg" width="90" height="90"> <br>Medical Equipments <br> [RM 180.50]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Medical Equipments')">Add to Cart</button>
+                    </td>
+					<td>
+                        <img src="supps.jpg" width="90" height="90"> <br>Supplements <br> [RM 190.50]
+                        <br>
+                        <button class = "addtocart" onclick="addToCart('Supplements')">Add to Cart</button>
+                    </td>
+					<td>
+                        <img src="oil.jpg" width="90" height="90"> <br>Hair Oil <br> [RM 44.00]
+                        <br>
+                        <button class="addtocart" onclick="addToCart('Hair Oil')">Add to Cart</button>
+                    </td>
+            </table>
+        </div>
+
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total Price: RM 0.00</p>
+        </div>
+
+       <script>
+    let cartItems = [];
+    let prices = {
+        'Medicine': 10.00,
+        'Movement Assistance': 280.00,
+        'Body Wash': 18.50,
+        'Medical Equipments': 180.50,
+        'First Aid Equipments': 150.50,
+        'Epipens': 108.00,
+        'Face Mask': 25.00,
+        'Supplements': 190.50,
+        'Inhaler': 55.00,
+        'Hospital Bed': 230.00,
+        'Face Serum': 60.50,
+        'Hair Oil': 44.00,
+    };
+    let totalPrice = 0.00;
+
+function addToCart(item) {
+    cartItems.push(item);
+    totalPrice += prices[item] || 0;
+    updateCartDisplay();
+}
+
+function updateCartDisplay() {
+    const cartList = document.getElementById('cart-items');
+    const totalDisplay = document.getElementById('total-price');
+
+    cartList.innerHTML = '';
+
+    cartItems.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = item;
+        cartList.appendChild(listItem);
+    });
+
+    // Add a break before updating the cart display
+    cartList.appendChild(document.createElement('br'));
+
+    totalDisplay.textContent = `Total Price: RM ${totalPrice.toFixed(2)}`;
+}
+
+</script>
+
+
+    </div>
+</body>
+
+</html>

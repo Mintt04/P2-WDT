@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CONTACT US</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+        function validateForm() {
+            var name = document.forms["contactForm"]["name"].value;
+            var num_phone = document.forms["contactForm"]["num_phone"].value;
+            var age = document.forms["contactForm"]["age"].value;
+            var gender = document.forms["contactForm"]["gender"].value;
+            var pain = document.forms["contactForm"]["dropdown"].value;
+            var address = document.forms["contactForm"]["address"].value;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            if (num_phone == "") {
+                alert("Phone Number must be filled out");
+                return false;
+            }
+
+            if (age == "" || isNaN(age)) {
+                alert("Age must be a number");
+                return false;
+            }
+
+            if (gender === "") {
+                alert("Please select a gender");
+                return false;
+            }
+
+            if (pain === "-NONE-") {
+                alert("Please select a pain");
+                return false;
+            }
+
+            if (address == "") {
+                alert("Address must be filled out");
+                return false;
+            }
+			
+			alert("Your information has been saved.");
+    return true;
+        }
+    </script>
+	<script src ="time.js"></script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="header">
+            <h1>BIOMEDICARE PHARMACY</h1>
+			<div id="clock"></div>
+            <div id="calendar"></div>
+            <div id="greeting"></div>
+        </div>
+
+        <div id="nav">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+            <a href="home.html">Home</a>
+			<a href="about.html">About Us</a>
+            <a href="service.html">Service</a>
+            <a href="product.html">Product</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="column">
+            <div class="form-container">
+                <form name="contactForm" onsubmit="return validateForm()">
+                    <h2>
+                        <div class="num">
+						<br>
+                            <b><p>CALL US : 04-12345678</p></b>
+                        </div>
+                        <hr>
+                        <div class="right-logo">
+                            <img src="logo.png">
+                        </div>
+                        1. Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" />
+                        <br>
+                        <br>2. Phone Number : <input type="text" name="num_phone" />
+                        <br>
+                        <br>3. Age : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="age" />
+                        <br>
+						<br>
+
+                        <p>4. What is your gender ?</p>&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <br>
+
+                        <br>
+						<br><td>5. What pain are you dealing with ?</td></br>&nbsp;&nbsp;&nbsp;
+                        <select name="dropdown">
+                            <option value="-NONE-" selected>-NONE-</option>
+                            <option value="FLU">FLU</option>
+                            <option value="FEVER">FEVER</option>
+                            <option value="NAUSEA">NAUSEA</option>
+                            <option value="SORE THROAT">SORE THROAT</option>
+                            <option value="HEADACHE/MIGRAIN">HEADACHE/MIGRAIN</option>
+                            <option value="OTHERS">OTHERS</option>
+                        </select>
+                        </br>
+
+                        <br>
+						<br>6. Detail your problem here : </br>&nbsp;&nbsp;&nbsp;
+                        <textarea rows="4" cols="60" name="details">
+                        </textarea>
+
+                        <br>
+                        <br>7. Address : </br>&nbsp;&nbsp;&nbsp;
+                        <textarea rows="4" cols="60" name="address">
+                        </textarea>
+
+                        <br>
+						<br>
+						<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class = "reset">Reset</button>&nbsp;
+						<button class = "submit">Submit</button>
+						</br></div>
+
+                </form>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
